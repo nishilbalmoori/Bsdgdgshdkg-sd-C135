@@ -32,7 +32,7 @@ function draw(){
     image(vid,0,0,480,380)
     if(status != ""){
         objDetector.detect(vid,gotResult);
-        for(let i;i<objs.length;i++){
+        for(let i = 0;i<objs.length;i++){
             document.getElementById("Status").textContent = "Status: Started"   
             document.getElementById("NumberOfObjects").textContent = "Number Of Objects Detected: "+objs.length+"objects"
 
