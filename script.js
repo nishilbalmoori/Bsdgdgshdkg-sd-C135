@@ -36,11 +36,11 @@ function draw(){
             document.getElementById("Status").textContent = "Status: Started"   
             document.getElementById("NumberOfObjects").textContent = "Number Of Objects Detected: "+objs.length+"objects"
             randomColor = getRandomColor();
-            fill(Math.floor(Math.random()*256),Math.floor(Math.random()*256),Math.floor(Math.random()*256));
+            fill(0);
             p = objs[i].confidence.toFixed(2)*100;
             text(objs[i].label+" "+p+"%",objs[i].x+15,objs[i].y+15)
             noFill();
-            stroke(Math.floor(Math.random()*256),Math.floor(Math.random()*256),Math.floor(Math.random()*256));
+            stroke(0);
             rect(objs[i],x, objs[i].y,objs[i].width,objs[i].height);
         }
     }
