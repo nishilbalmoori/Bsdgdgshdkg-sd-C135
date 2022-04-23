@@ -41,7 +41,7 @@ function draw(){
             text(objs[i].label+" "+p+"%",objs[i].x+15,objs[i].y+15)
             noFill();
             stroke(0);
-            rect(objs[i],x, objs[i].y,objs[i].width,objs[i].height);
+            rect(objs[i].x, objs[i].y,objs[i].width,objs[i].height);
         }
     }
 }
