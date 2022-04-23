@@ -32,15 +32,15 @@ function draw(){
     image(vid,0,0,480,380)
     if(status != ""){
         objDetector.detect(vid,gotResult);
-        for(let i = 0;i<objs.length;i++){
+        for(var i = 0;i<objs.length;i++){
             document.getElementById("Status").textContent = "Status: Started"   
             document.getElementById("NumberOfObjects").textContent = "Number Of Objects Detected: "+objs.length+"objects"
-
-            fill(getRandomColor()[0],getRandomColor()[1],getRandomColor()[2]);
+            randomColor = getRandomColor();
+            fill(Math.floor(Math.random()*256),Math.floor(Math.random()*256),Math.floor(Math.random()*256));
             p = objs[i].confidence.toFixed(2)*100;
             text(objs[i].label+" "+p+"%",objs[i].x+15,objs[i].y+15)
             noFill();
-            stroke(getRandomColor()[0],getRandomColor()[1],getRandomColor()[2]);
+            stroke(Math.floor(Math.random()*256),Math.floor(Math.random()*256),Math.floor(Math.random()*256));
             rect(objs[i],x, objs[i].y,objs[i].width,objs[i].height);
         }
     }
